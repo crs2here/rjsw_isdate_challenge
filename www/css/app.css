@@ -1,0 +1,70 @@
+/* line 4, c:/_source/projects/rsjw/rjsw_isdate_challenge/source/css/app.scss */
+body, html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #202020;
+}
+
+/* line 9, c:/_source/projects/rsjw/rjsw_isdate_challenge/source/css/app.scss */
+#rjsw-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding: 0 15px;
+}
+
+/* line 14, c:/_source/projects/rsjw/rjsw_isdate_challenge/source/css/app.scss */
+#rjsw-title h1 {
+  line-height: 1em;
+  color: #3a3a3a;
+}
+
+/* line 18, c:/_source/projects/rsjw/rjsw_isdate_challenge/source/css/app.scss */
+#rjsw-instruction {
+  margin: 0 0 20px;
+}
+
+/* line 21, c:/_source/projects/rsjw/rjsw_isdate_challenge/source/css/app.scss */
+#rjsw-control {
+  margin: 25px 0 15px;
+}
+
+/* line 24, c:/_source/projects/rsjw/rjsw_isdate_challenge/source/css/app.scss */
+#rjsw-control .rjsw-list-option {
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+/* line 27, c:/_source/projects/rsjw/rjsw_isdate_challenge/source/css/app.scss */
+#rjsw-control .rjsw-list-option:hover {
+  background-color: #e5e5e5;
+}
+
+/* line 32, c:/_source/projects/rsjw/rjsw_isdate_challenge/source/css/app.scss */
+#rjsw-console {
+  padding: 0 15px;
+}
+
+/* line 35, c:/_source/projects/rsjw/rjsw_isdate_challenge/source/css/app.scss */
+#rjsw-console .console-window {
+  padding: 10px;
+  height: 400px;
+  width: 100%;
+  margin: 20px auto;
+  background-color: #111;
+  color: #fff;
+  font-family: monospace, serif;
+  font-size: 1.2em;
+  overflow-y: scroll;
+}
+
+/* line 47, c:/_source/projects/rsjw/rjsw_isdate_challenge/source/css/app.scss */
+#rjsw-footer {
+  position: absolute;
+  bottom: 0;
+  padding: 0 15px 20px;
+}
+
+/* line 54, c:/_source/projects/rsjw/rjsw_isdate_challenge/source/css/app.scss */
+.rjsw-mono-font {
+  font-family: monospace, serif;
+  color: #606060;
+}

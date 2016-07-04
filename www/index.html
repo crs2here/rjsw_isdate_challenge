@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Riverside JS Workshop isDate Code Challenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="libs/moment.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <div id="rjsw-title" class="row">
+        <h1>Riverside JS Workshop <span class="rjsw-mono-font">isDate()</span> Code Challenge</h1>
+    </div>
+    <div id="rjsw-instruction" class="row">
+        <div class="instruction">Use this UI to test your custom parser method. Both jQuery and
+            Moment.js have been included for your use.  Code your solution using the stubbed out method,
+            <span class="rjsw-mono-font">api.customDateParser()</span>, in the app.js file.
+            Before you begin, please read the <em>isDateChallenge.pdf</em> file. You'll find it in the project root. It will give a better understanding of the requirements for this challenge.  When you have a working
+            solution to share, post a link in the Issues section of the
+            <a href="https://github.com/RiversideJSW/rjsw_isdate_challenge/issues">RiversideJSW repository</a>.  Good luck, and happy coding!
+        </div>
+    </div>
+    <div id="rjsw-control" class="row">
+
+        <form id="rjsw-form" class="form-inline">
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="rjsw-date-input" placeholder="Date Input">
+            </div>
+
+            <div class="btn-group">
+
+                <button id="rjsw-run-button" type="button" class="btn btn-success"></button>
+                <button id="rjsw-selector-button" type="button" class="btn btn-success dropdown-toggle"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+
+                <ul class="dropdown-menu">
+                    <li id="rjsw-select-mine" class="rjsw-list-option">Custom Parser</li>
+                    <li id="rjsw-select-native" class="rjsw-list-option">Native JS Parser</li>
+                    <li id="rjsw-select-moment" class="rjsw-list-option">Moment.js Parser</li>
+                </ul>
+
+            </div>
+
+            <button id="rjsw-clear-button" type="button" class="btn btn-info pull-right">Clear Console</button>
+
+        </form>
+
+
+    </div>
+
+    <div id="rjsw-console" class="row">
+        <div class="console-window"></div>
+    </div>
+
+    <div id="rjsw-footer" class="row">&copy; <span id="rjsw-copy-date"></span>, <a href="//riversidejs.net/">Riverside JS Workshop</a></div>
+
+
+</div>
+
+</body>
+</html>

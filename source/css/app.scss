@@ -1,0 +1,57 @@
+$font-color: #202020;
+$light-gray: #e5e5e5;
+
+body, html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $font-color;
+}
+
+#rjsw-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding: 0 15px;
+
+  h1{line-height: 1em;
+    color: lighten($font-color, 10%)
+  }
+}
+#rjsw-instruction {
+  margin: 0 0 20px;
+}
+#rjsw-control {
+  margin: 25px 0 15px;
+
+  .rjsw-list-option{
+    cursor: pointer;
+    padding-left: 10px;
+    &:hover{
+      background-color: $light-gray;
+    }
+  }
+}
+#rjsw-console {
+  padding: 0 15px;
+
+  .console-window{
+    padding:10px;
+    height: 400px;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #111;
+    color: #fff;
+    font-family: monospace, serif;
+    font-size: 1.2em;
+    overflow-y: scroll;
+  }
+}
+#rjsw-footer{
+  position: absolute;
+  bottom: 0;
+  padding: 0 15px 20px;
+}
+
+
+.rjsw-mono-font{
+  font-family: monospace, serif;
+  color: lighten($font-color, 25%)
+}
