@@ -1,29 +1,86 @@
 'use strict';
+/*
+moment 
+2016-05-30=Mon May 30 2016 
+16-05-30  =NAN
+05-30-2016=NAN
 
+native 
+2016-05-30=Sun May 29 2016
+05-30-2016=Mon May 30 2016
+16-05-30  =Sun Apr 05 1931
+05-30-16  =Tue May 30 1916
+*/
 var isDate = function () {
 
     var api = {};
 
     /*
-     * This is the function where you will code your isDate parser. There should be no need to alter any of the
-     * other functions in this module, but you can use them for guidance.  add additional functions as you find
+     * This is the function where you will code your isDate parser. 
+       There should be no need to alter any of the
+     * other functions in this module, but you can 
+       use them for guidance.  add additional functions as you find
      * necessary.  Good Luck!
      */
 
-    api.customDateParser = function (str) {
-
-        /*
-            insert your code here
-           */
-
-        //return what ever success/fail message you choose to be logged to the console
-        return 'Running your Custom Date Parser....You have some work to do yet.';
+  api.customDateParser = function (str) {
+    var space=" ";
+    var months  =["Jan","Feb","Mar","Apr",
+                  "May","Jun","Jul","Aug",
+                  "Sep","Oct","Nov","Dec"];
+    var weekDay =["Sun","Mon","Tue","Wed",
+                  "Thu","Fri","Sat"];
+    
+    var tempDate=new Date(str);
+    var day, mm,dd,yyyy, fullDate;  
+    
+    mm  =tempDate.getMonth();
+    dd  =tempDate.getDate();
+    yyyy=tempDate.getFullYear();
+    day =tempDate.getDay();
+    //2016-05-30
+    //Deal with ISO?
+    if (str.indexOf(dd)==-1){
+      dd=str.slice(-2);
+      tempDate.setDate(dd);
+      day =tempDate.getDay();
+    }
+    
+    //Build date
+    fullDate=weekDay[day]+space+months[mm]+space+dd+space+yyyy;
+      
+    return '"'+str+'" --> custom Parser --> '+fullDate;//+dateVar;
     };
 
     /*
      * Whoa there! No need to code beyond this point.
      */
+/*
+      var mm,dd,yyyy;  
+      var dateLen=str.length;
+      
+      if (str.indexOf("/")==-1)
+       {
+        switch(dateLen)
+           {
+            case '6':
+             str=str.substring(0,2)+'/'+
+                  str.substring(2,4)+'/'+
+                  str.substring(4,6);
+             break;
+            case '8':
+             str=str.substring(0,2)+'/'+
+                  str.substring(2,4)+'/'+
+                  str.substring(4,8);
+             break;
+           }
+       }
+      
+      mm=dStr.substring(0,dStr.indexOf('/'));
+      dd=dStr.substring((0,dStr.indexOf('/')+1),dStr.lastIndexOf('/'));
+      yyyy=dStr.substring((dStr.lastIndexOf('/')+1),dStr.length);
 
+*/
     api.parse = function (str) {
         api.consoleLog(api.parser(str));
     };
