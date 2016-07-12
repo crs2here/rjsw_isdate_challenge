@@ -12,13 +12,74 @@ native
 05-30-16  =Tue May 30 1916
 left off here
 need to handle the following formats 
-    16-05-30 --> THIS WORKS
-    16/05/30 --> THIS WORKS
-    2016/05/30-->this works
-    2016-05-30-->this works
-    160530   -->  this works
-    20160530 -->  this works
-        */
+(should write test script to test 
+ all of these on each browser)
+05/30/2016
+05-30-2016
+05302016
+
+05/30/16
+05-30-16
+053016
+
+5/30/2016
+5-30-2016
+5302016
+
+5/30/16
+5-30-16
+53016
+
+16-05-30
+16/05/30
+160530   
+
+16-5-30
+16/5/30
+16530   
+
+2016/05/30
+2016-05-30
+20160530 
+
+2016/5/30
+2016-5-30
+2016530 
+
+
+*/
+
+var testCases = [
+    "05 / 30 / 2016",
+    "05 - 30 - 2016",
+    "05302016",
+    "05 / 30 / 16",
+    "05 - 30 - 16",
+    "053016",
+    "5 / 30 / 2016",
+    "5 - 30 - 2016",
+    "5302016",
+    "5 / 30 / 16",
+    "5 - 30 - 16",
+    "53016",
+    "16 - 05 - 30",
+    "16 / 05 / 30",
+    "160530",
+    "16 - 5 - 30",
+    "16 / 5 / 30",
+    "16530",
+    "2016 / 05 / 30",
+    "2016 - 05 - 30",
+    "20160530",
+    "2016 / 5 / 30",
+    "2016 - 5 - 30",
+    "2016530"
+];
+
+for(var i=0; i<testCases.length;i++){
+    console.log(testCases[i]);
+}
+
 var isDate = function() {
 
     var api = {};
@@ -198,6 +259,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //set the event handler for the parse button
     document.getElementById('rjsw-run-button').addEventListener('click', function() {
+var testCases = [
+    "05/30/2016",
+    "05-30-2016",
+    "05302016",
+    "05/30/16",
+    "05-30-16",
+    "053016",
+    "5/30/2016",
+    "5-30-2016",
+    "5302016",
+    "5/30/16",
+    "5-30-16",
+    "53016",
+    "16-05-30",
+    "16/05/30",
+    "160530",
+    "16-5-30",
+    "16/5/30",
+    "16530",
+    "2016/05/30",
+    "2016-05-30",
+    "20160530",
+    "2016/5/30",
+    "2016-5-30",
+    "2016530"
+];
+
+for(var i=0; i<testCases.length;i++){
+    isDate.parse((testCases[i]));
+}
+
         isDate.parse(date_input.value);
     });
 
